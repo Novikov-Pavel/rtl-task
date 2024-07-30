@@ -1,32 +1,35 @@
-Тестовое задание
+# inventory-test
 
-Вам необходимо реализовать веб-приложение - автономно работающий инвентарь, т.е. после закрытия браузера предметы и их позиции должны быть сохранены. По нажатию на предмет инвентаря должна выезжать плашка с его описанием и кнопкой удалить (см. комментарии на фигме)
+This template should help get you started developing with Vue 3 in Vite.
 
-Стек: Vue 3 composition api, SCSS, Pinia, TypeScript. Нельзя использовать css фреймворки, типа tailwind. Для реализации dragndrop разрешено использовать сторонние библиотеки
+## Recommended IDE Setup
 
-Срок выполнения задания: 1 день
-Задание должно быть выложено на GitHub и развернуто на любом хостинге (gh pages, netlify, и т.п.). Инициализируйте репозиторий перед началом выполнения тестового, чтобы репозиторий не состоял из одного коммита
-Дизайн: https://www.figma.com/design/t4whC9HCWE3ZSqefZdnsU8/FrontTest?node-id=0-1&t=VTDFKxAmw319OzkR-1
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-Что выполнено:
-Приложение сверстано в соответствии с дизайн-макетом;
-Добавлены скелетоны при загрузке данных;
-При удалении элементов, соответствующий счетчик изменяется (реактивное значение);
-Реализован функционал Drag and Drop;
-Добавлена анимация при перетаскивании элемента по инвентарю;
-По нажатию на предмет инвентаря выезжает модальное окно с его описанием и кнопкой удалить;
-Модальное окно наплывает на инвентарь;
-Модальное окно является переиспользуемым компонентом;
-После закрытия браузера предметы и их позиции сохраняются;
+## Customize configuration
 
-Project Setup
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
 npm install
+```
 
-Compile and Hot-Reload for Development
+### Compile and Hot-Reload for Development
+
+```sh
 npm run dev
+```
 
-Compile and Minify for Production
+### Compile and Minify for Production
+
+```sh
 npm run build
+```
 
-Lint with ESLint
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
 npm run lint
+```
