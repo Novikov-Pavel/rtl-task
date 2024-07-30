@@ -1,11 +1,9 @@
 <template>
   <div class="left-component">
     <div class="left-component__img">
-      <template v-if="isLoading">
-        <img src="@/assets/images/left_img.png" alt="img" />
-      </template>
-      <template v-else> Изображение карточки </template>
+      <img src="@/assets/images/left_img.png" alt="img" />
     </div>
+
     <div class="left-component__title">
       <template v-if="isLoading">
         <UiSkeleton size="large" />
@@ -15,25 +13,24 @@
 
     <div class="left-component__description">
       <template v-if="isLoading">
-        <UiSkeleton v-for="line in countOfLines" :key="line" />
+        <UiSkeleton v-for="line in lines" :key="line" />
       </template>
-      <template v-else> Описание карточки </template>
-    </div>
-    <div class="left-component__bottom-info">
-      <template v-if="isLoading">
-        <UiSkeleton size="small" />
+      <template v-else>
+        <div v-for="line in lines" :key="line">Описание: {{ line }} строка</div>
       </template>
-      <template v-else> Описание карточки </template>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed } from "vue";
 import { UiSkeleton } from "@/components/UI";
+import { useInventoryStore } from "@/stores/store";
 
-const isLoading = ref<boolean>(true);
-const countOfLines = ref<number>(5);
+const store = useInventoryStore();
+const isLoading = computed(() => store.loading);
+
+const lines: number = 5;
 </script>
 
 <style lang="scss" scoped>
@@ -48,10 +45,20 @@ const countOfLines = ref<number>(5);
   border-radius: 12px;
   border: 1px solid #4d4d4d;
   background: #262626;
+  font-family: "Inter";
+  color: #fff;
+  font-size: 16px;
+  &__title {
+    font-size: 19px;
+    max-width: 190px;
+    width: 100%;
+  }
   &__description {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    max-width: 180px;
+    width: 100%;
   }
 }
 </style>

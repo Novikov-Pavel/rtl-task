@@ -1,2 +1,3 @@
-export * from "@/components/InventoryLeftComponent";
+export * from "@/components/Inventory/InventoryLeftComponent";
 export * from "@/components/UI";
+export * from "@/components/ModalWindow";

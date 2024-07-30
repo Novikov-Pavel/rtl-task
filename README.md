@@ -1,14 +1,24 @@
-# inventory-test
+# Тестовое задание
+## Технологии: Vue3 (Composition API), Pinia, Vite, ESLint
 
-This template should help get you started developing with Vue 3 in Vite.
+## Текст задания: 
+Необходимо реализовать веб-приложение - автономно работающий инвентарь, т.е. после закрытия браузера предметы и их позиции должны быть сохранены. По нажатию на предмет инвентаря должна выезжать плашка с его описанием и кнопкой удалить (см. комментарии на фигме)
 
-## Recommended IDE Setup
+Дизайн: https://www.figma.com/file/ziQM2VcgY1D7UnX937cSEO/Vue-Test-Task
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Важно! Не используйте никаких ui библиотек / css фреймворков. Только scss. Реализация на Vue 3 composition api. TypeScript если уверены в своих силах.
 
-## Customize configuration
+## Что выполнено:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Приложение сверстано в соответствии с дизайн-макетом;
+- Добавлены скелетоны при загрузке данных;
+- При удалении элементов, соответствующий счетчик изменяется (реактивное значение);
+- Реализован функционал Drag and Drop;
+- Добавлена анимация при перетаскивании элемента по инвентарю;
+- По нажатию на предмет инвентаря выезжает модальное окно с его описанием и кнопкой удалить;
+- Модальное окно наплывает на инвентарь;
+- Модальное окно является переиспользуемым компонентом;
+- После закрытия браузера предметы и их позиции сохраняются;
 
 ## Project Setup
 

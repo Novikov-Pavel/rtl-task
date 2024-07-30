@@ -5,12 +5,7 @@ import { fileURLToPath, URL } from "url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    svgLoader({
-      defaultImport: "url",
-    }),
-  ],
+  plugins: [vue(), svgLoader()],
   envPrefix: "APP_",
   server: {
     open: true,
